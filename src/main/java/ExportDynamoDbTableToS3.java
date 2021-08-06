@@ -1,8 +1,12 @@
+// Java 1.x
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.model.ExportTableToPointInTimeRequest;
+// Java 2.x
+/*
 import software.amazon.awssdk.services.dynamodb.model.ExportTableToPointInTimeRequest;
 import software.amazon.awssdk.services.dynamodb.DynamoDbClient;
+*/
 
 public class ExportDynamoDbTableToS3 {
     public static void main(String[] args) {
@@ -29,6 +33,7 @@ public class ExportDynamoDbTableToS3 {
         amazonDynamoDB.exportTableToPointInTime(exportTableToPointInTimeRequest);
 
         // Java 2.x
+        /*
         DynamoDbClient dynamoDbClient = DynamoDbClient.builder().build();
         ExportTableToPointInTimeRequest exportTableToPointInTimeRequest = ExportTableToPointInTimeRequest
                 .builder()
@@ -40,5 +45,6 @@ public class ExportDynamoDbTableToS3 {
                 .build();
 
         dynamoDbClient.exportTableToPointInTime(exportTableToPointInTimeRequest);
+         */
     }
 }
